@@ -17,7 +17,7 @@ public class Hooks {
     public void setupAllure(){
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide()
                 .screenshots(true)
-                .savePageSource(true));
+                .savePageSource(false));
     }
 
     @Attachment(value = "screen",type = "image/png")

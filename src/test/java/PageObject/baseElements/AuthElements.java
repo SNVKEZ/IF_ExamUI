@@ -1,6 +1,7 @@
 package PageObject.baseElements;
 
 import com.codeborne.selenide.SelenideElement;
+import io.cucumber.java.eo.Se;
 
 import static com.codeborne.selenide.Selenide.$x;
 
@@ -11,5 +12,6 @@ public class AuthElements {
     public static final SelenideElement viewProfile = $x("//a[@id='view_profile']");
     public static final SelenideElement getUserName = $x("//dd[@id='up-d-username']");
     public static final SelenideElement inButton = $x("//input[@value='Войти']");
+    public static final SelenideElement logOut = $x("//a[@id='log_out']");
 
 }

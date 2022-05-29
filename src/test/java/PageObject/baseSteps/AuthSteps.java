@@ -11,6 +11,8 @@ import static com.codeborne.selenide.Condition.visible;
 
 public class AuthSteps {
 
+
+
     @Step("записываем логин")
     public static void inLog(String log){
         inputLog.shouldBe(visible, Duration.ofSeconds(60)).click();
@@ -35,5 +37,11 @@ public class AuthSteps {
         //проверяем совпадение логина
         Assert.assertEquals("Вход пользователя не был осуществлен!",getUserName.getText(),nick);
         saveAsScreenshot();
+    }
+
+    @Step("Выходим из профиля, чтобы можно было протестировать одновременно все тесты")
+    public static void outLog(){
+        inProfile.click();
+        logOut.click();
     }
 }
